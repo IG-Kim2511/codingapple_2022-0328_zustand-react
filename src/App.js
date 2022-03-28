@@ -20,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <h1>zustand</h1>
+      <h2>https://www.npmjs.com/package/zustand</h2>
 
       <div>같은 file내의 components에는 {useStore}를 props로 뺄 필요없이 바로 사용 가능함</div>
       <BearCounter/>
