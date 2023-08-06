@@ -3,7 +3,8 @@ import React from 'react'
 
 import create from 'zustand'
 
-import Decrease from './Decrease';
+import Decrease from './zustand-document/Decrease';
+import CartPage from './ai-zustand-template/CartPage';
 
 const useStore = create(set => ({
   bears: 0,
@@ -16,18 +17,34 @@ const useStore = create(set => ({
 }))
 
 
+
+
 function App() {
   return (
     <div className="App">
       <h1>zustand</h1>
       <h2>https://www.npmjs.com/package/zustand</h2>
 
-      <div>같은 file내의 components에는 {useStore}를 props로 뺄 필요없이 바로 사용 가능함</div>
-      <BearCounter/>
-      <Controls/>
+      <div>
+        <h2>zustand document</h2>
+        <div>같은 file내의 components에는 useStore를 props로 뺄 필요없이 바로 사용 가능함</div>
 
-      <div>🦄다른 components file에 {useStore}를 props로 빼서 만들기 쉬움</div>
-      <Decrease useStore={useStore}/>
+        <BearCounter/>
+
+        <Controls/>
+
+        <div>🦄다른 components file에 useStore를 props로 빼서 만들기 쉬움</div>
+
+        <Decrease useStore={useStore}/>
+      </div>
+
+      <div>      
+        <h2>AI code</h2>
+        {/* AI code <CartPage/>*/ }
+        
+        <CartPage/>
+
+      </div>
     </div>
   );
 }
