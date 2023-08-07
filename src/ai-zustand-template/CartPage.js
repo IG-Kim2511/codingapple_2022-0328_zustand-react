@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import create from 'zustand';
 
 const useCartStore = create((set) => ({
@@ -42,6 +43,11 @@ const CartPage = () => {
       <p>Total Price: ${totalPrice}</p>
       <p>Total Quantity: {totalQuantity}</p>
       <button onClick={handleReset}>Reset Quantities</button>
+
+        
+      <div>
+        
+      </div>
     </div>
   );
 };
